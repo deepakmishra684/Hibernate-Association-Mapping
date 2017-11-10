@@ -1,0 +1,5 @@
+** OneToOne Mapping**
+********************************************************************************************
+mappedBy = "vehicle"
+=> Here the use of mappedBy in Vehicle class for bidirectional mapping because hibernate not 
+maintain third mapping table

@@ -1,0 +1,17 @@
+** OneToMany **
+***************************************************************************************************
+@OneToMany(targetEntity=Vehicle.class,mappedBy="user",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+=>
+The use of "targetEntity=Vehicle.class" this to specify which class you want to use
+The use of "mappedBy="user" " this line if you dont want to create Hibernate third table which is create
+bydefault to maintain relations of primary kyes.
+
+******************************************************************************************************
+@JoinTable(name = "USER_VEHICLE", 
+	           joinColumns = @JoinColumn(name = "USER_ID"),
+	           inverseJoinColumns = @JoinColumn(name = "VEHICLE_ID")) 
+=>If you want to meaningful Third mapping table which created by hibernate. So use This code.
+*************************************************************************************************
+@JoinColumn(name="USER_ID_FK",referencedColumnName="USER_ID")
+=>referencedColumnName="USER_ID" is use to taking reference of primary key there are more than one
+ primary key
